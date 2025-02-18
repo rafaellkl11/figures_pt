@@ -7,14 +7,14 @@ import java.awt.*;
  * @version 2016.02.29
  */
 
-public class Triangulo
+public class Triangulo extends Formas
 {
-    private int altura;
-    private int base;
-    private int posiçãoX;
-    private int posiçãoY;
-    private String cor;
-    private boolean estáVisível;
+    protected int altura;
+    protected int base;
+    protected int posiçãoX;
+    protected int posiçãoY;
+    protected String cor;
+    protected boolean estáVisível;
 
     /**
      * Create a new triangle at default position with default color.

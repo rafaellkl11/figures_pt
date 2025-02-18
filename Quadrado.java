@@ -8,13 +8,13 @@ import java.awt.*;
  * (Traduzido por Daniel Conrado)
  */
 
-public class Quadrado
+public class Quadrado extends Formas
 {
-    private int tamanho;
-    private int posiçãoX;
-    private int posiçãoY;
-    private String cor;
-    private boolean estáVisível;
+    protected int tamanho;
+    protected int posiçãoX;
+    protected int posiçãoY;
+    protected String cor;
+    protected boolean estáVisível;
 
     /**
      * Cria um novo quadrado na posição padrão e com cor padrão.

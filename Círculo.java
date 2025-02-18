@@ -8,13 +8,13 @@ import java.awt.geom.*;
  * @version 2016.02.29
  */
 
-public class Círculo
+public class Círculo extends Formas
 {
-    private int diâmetro;
-    private int posiçãoX;
-    private int posiçãoY;
-    private String cor;
-    private boolean estáVisível;
+    protected int diâmetro;
+    protected int posiçãoX;
+    protected int posiçãoY;
+    protected String cor;
+    protected boolean estáVisível;
     
     /**
      * Cria um novo círculo na posição padrão com a cor padrão.
