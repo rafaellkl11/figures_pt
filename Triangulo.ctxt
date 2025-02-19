@@ -10,8 +10,8 @@ comment10.text=\r\n\ Slowly\ move\ the\ triangle\ horizontally\ by\ 'distance'\ 
 comment11.params=dist\u00E2ncia
 comment11.target=void\ moverVerticalLentamente(int)
 comment11.text=\r\n\ Slowly\ move\ the\ triangle\ vertically\ by\ 'distance'\ pixels.\r\n
-comment12.params=novaAltura\ novaBase
-comment12.target=void\ mudarTamanho(int,\ int)
+comment12.params=novaAltura
+comment12.target=void\ mudarTamanho(int)
 comment12.text=\r\n\ Change\ the\ size\ to\ the\ new\ size\ (in\ pixels).\ Size\ must\ be\ >\=\ 0.\r\n
 comment13.params=novaCor
 comment13.target=void\ mudarCor(java.lang.String)

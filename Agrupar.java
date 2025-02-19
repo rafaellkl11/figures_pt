@@ -1,34 +1,26 @@
-import java.awt.*;
-import java.awt.geom.*;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Um círculo que pode ser manipulado e que desenha a si mesmo em uma tela.
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
- */
-
-public class Círculo extends Figuras
-{
-    protected int diâmetro;
+public class Agrupar extends Figuras
+{   
+    protected List<Figuras> figuras;    
+    protected int tamanho;
     protected int posiçãoX;
     protected int posiçãoY;
     protected String cor;
     protected boolean estáVisível;
     
-    /**
-     * Cria um novo círculo na posição padrão com a cor padrão.
-     */
-    public Círculo()
+    public Agrupar()
     {
-        diâmetro = 68;
-        posiçãoX = 230;
-        posiçãoY = 90;
-        cor = "azul";
+        tamanho = 60;
+        posiçãoX = 310;
+        posiçãoY = 120;
+        cor = "vermelho";
+        estáVisível = false;
     }
 
     /**
-     * Torna este círculo visível. Se já estiver vísivel, não faz nada.
+     * Torna este quadrado visível. Se já visível, então não faz nada.
      */
     public void tornarVisível()
     {
@@ -37,7 +29,7 @@ public class Círculo extends Figuras
     }
     
     /**
-     * Torna este círculo invisível. Se já estiver invisível, não faz nada.
+     * Torna este quadrado invisível. Se já estiver invisível, não faz nada.
      */
     public void tornarInvisível()
     {
@@ -46,7 +38,7 @@ public class Círculo extends Figuras
     }
     
     /**
-     * Move o círculo alguns pixels para a direita.
+     * Move o quadrado alguns pixels para a direita.
      */
     public void moverDireita()
     {
@@ -54,7 +46,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move o círculo alguns pixels para a esquerda.
+     * Move o quadrado alguns pixels para a esquerda.
      */
     public void moverEsquerda()
     {
@@ -62,7 +54,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move o círculo alguns pixels para cima.
+     * Move o quadrado alguns pixels para cima.
      */
     public void moverCima()
     {
@@ -70,7 +62,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move o círculo alguns pixels para baixo.
+     * Move o quadrado alguns pixels para baixo.
      */
     public void moverBaixo()
     {
@@ -78,7 +70,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move o círculo horizontalmente pela 'distância' em pixels.
+     * Move o quadrado horizontalmente pela 'distância' em pixels.
      */
     public void moverHorizontal(int distância)
     {
@@ -88,7 +80,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move o círculo verticalmente pela 'distância' em pixels.
+     * Move o quadrado verticalmente pela 'distância' em pixels.
      */
     public void moverVertical(int distância)
     {
@@ -98,7 +90,7 @@ public class Círculo extends Figuras
     }
 
     /**
-     * Move lentamente o círculo horizontalmente pela 'distância' em pixels.
+     * Move lentamente o quadrado horizontalmente pela 'distância' em pixels.
      */
     public void moverHorizontalLentamente(int distância)
     {
@@ -122,7 +114,7 @@ public class Círculo extends Figuras
     }
 
     /**
-    * Move lentamente o círculo verticalmente pela 'distância' em pixels.
+    * Move lentamente o quadrado verticalmente pela 'distância' em pixels.
      */
     public void moverVerticalLentamente(int distância)
     {
@@ -148,10 +140,10 @@ public class Círculo extends Figuras
     /**
      * Muda o tamanho para o novo valor (em pixels). Tamanho precise ser >= 0.
      */
-    public void mudarTamanho(int novoDiâmetro)
+    public void mudarTamanho(int novoTamanho)
     {
         apagar();
-        diâmetro = novoDiâmetro;
+        tamanho = novoTamanho;
         desenhar();
     }
 
@@ -164,22 +156,23 @@ public class Círculo extends Figuras
         cor = novaCor;
         desenhar();
     }
-
-    /**
-     * Desenha o círculo com as especificações atuais na tela.
-     */
+    
+    public void adicionar(Figuras fig) {
+        figuras.add(fig);
+    }
+    
     private void desenhar()
     {
         if(estáVisível) {
             Canvas canvas = Canvas.getCanvas();
-            canvas.draw(this, cor, new Ellipse2D.Double(posiçãoX, posiçãoY, 
-                                                          diâmetro, diâmetro));
+            canvas.draw(this, cor,
+                        new Figuras(posiçãoX, posiçãoY, tamanho, tamanho));
             canvas.wait(10);
         }
     }
 
     /**
-     * Apaga o círculo da tela.
+     * Apaga o quadrado da tela.
      */
     private void apagar()
     {
@@ -188,4 +181,10 @@ public class Círculo extends Figuras
             canvas.erase(this);
         }
     }
+    
+    public void remover(Figuras fig) {
+        figuras.remove(fig);
+    }
+
+    
 }

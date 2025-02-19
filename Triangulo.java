@@ -7,7 +7,7 @@ import java.awt.*;
  * @version 2016.02.29
  */
 
-public class Triangulo extends Formas
+public class Triangulo extends Figuras
 {
     protected int altura;
     protected int base;
@@ -150,11 +150,11 @@ public class Triangulo extends Formas
     /**
      * Change the size to the new size (in pixels). Size must be >= 0.
      */
-    public void mudarTamanho(int novaAltura, int novaBase)
+    
+    public void mudarTamanho(int novaAltura)
     {
         apagar();
         altura = novaAltura;
-        base = novaBase;
         desenhar();
     }
 

@@ -8,7 +8,7 @@ import java.awt.*;
  * (Traduzido por Daniel Conrado)
  */
 
-public class Quadrado extends Formas
+public class Quadrado extends Figuras
 {
     protected int tamanho;
     protected int posiçãoX;

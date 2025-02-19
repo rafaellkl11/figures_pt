@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Figuras
+comment1.params=
+comment1.target=void\ tornarVis\u00EDvel()
+comment10.params=dist\u00E2ncia
+comment10.target=void\ moverVerticalLentamente(int)
+comment11.params=novoTamanho
+comment11.target=void\ mudarTamanho(int)
+comment12.params=novaCor
+comment12.target=void\ mudarCor(java.lang.String)
+comment2.params=
+comment2.target=void\ tornarInvis\u00EDvel()
+comment3.params=
+comment3.target=void\ moverDireita()
+comment4.params=
+comment4.target=void\ moverEsquerda()
+comment5.params=
+comment5.target=void\ moverCima()
+comment6.params=
+comment6.target=void\ moverBaixo()
+comment7.params=dist\u00E2ncia
+comment7.target=void\ moverHorizontal(int)
+comment8.params=dist\u00E2ncia
+comment8.target=void\ moverVertical(int)
+comment9.params=dist\u00E2ncia
+comment9.target=void\ moverHorizontalLentamente(int)
+numComments=13
